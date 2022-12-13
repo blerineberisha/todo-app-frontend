@@ -34,15 +34,14 @@ export default function TaskCreationDialog() {
             type="text"
             fullWidth
             variant="outlined"
-            
           />
           <TextField
-          id="outlined-multiline-static"
-          margin='dense'
-          label="Description"
-          multiline
-          fullWidth
-          rows={3}
+            id="outlined-multiline-static"
+             margin='dense'
+            label="Description"
+            multiline
+            fullWidth
+            rows={3}
         />
         </DialogContent>
         <DialogActions className='button_group'>
