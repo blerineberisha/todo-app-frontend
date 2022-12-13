@@ -1,34 +1,37 @@
-.Login-paper {
-  width: 420px;
-  padding: 20px 60px 50px 60px;
-  border-radius: 30px !important;
-}
+.Login {
+  &-paper {
+    width: 420px;
+    padding: 20px 60px 50px 60px;
+    border-radius: 30px !important;
+  }
 
-.Login-container {
-  gap: 20px;
-  align-items: center;
-}
+  &-container {
+    gap: 20px;
+    align-items: center;
 
-.Login-container > * {
-  width: 100%;
-}
+    > * {
+      width: 100%;
+    }
+  }
 
-.Login-button {
-  border-radius: 100px !important;
-}
+  &-button {
+    border-radius: 100px !important;
 
-.Login-divider {
-  font-size: 14px !important;
-  color: gray !important;
-}
+    &-signup {
+      @extend .Login-button;
+      width: fit-content;
+    }
+  }
 
-.Login-header {
-  color: var(--primary-main);
-  text-align: center;
-  font-weight: bold;
-  margin: 10px;
-}
+  &-divider {
+    font-size: 14px !important;
+    color: gray !important;
+  }
 
-#LoginSignUpButton {
-  width: fit-content;
+  &-header {
+    color: var(--primary-main);
+    text-align: center;
+    font-weight: bold;
+    margin: 10px;
+  }
 }

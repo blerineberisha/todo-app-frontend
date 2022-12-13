@@ -71,8 +71,7 @@ function Login() {
           </Button>
           <Divider className="Login-divider">OR</Divider>
           <Button
-            className="Login-button"
-            id="LoginSignUpButton"
+            className="Login-button-signup"
             variant="contained"
             size="large"
           >
