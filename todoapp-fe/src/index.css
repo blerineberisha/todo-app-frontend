@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
 
 body {
+  --primary-main: #0b926d;
+  --primary-light: #49b093;
+  --primary-dark: #037555;
+  --primary-darker: #005b42;
+  --error-main: #801515;
+
   margin: 0;
   font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
