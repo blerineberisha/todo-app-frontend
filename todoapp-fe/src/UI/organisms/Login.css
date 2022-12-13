@@ -1,0 +1,38 @@
+body {
+  background: #0b926d;
+}
+
+.Login-paper {
+  width: 420px;
+  padding: 20px 60px 50px 60px;
+  border-radius: 30px !important;
+}
+
+.Login-container {
+  gap: 20px;
+  align-items: center;
+}
+
+.Login-container > * {
+  width: 100%;
+}
+
+.Login-button {
+  border-radius: 100px !important;
+}
+
+.Login-divider {
+  font-size: 14px !important;
+  color: gray !important;
+}
+
+.Login-header {
+  color: #0b926d;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px;
+}
+
+#LoginSignUpButton {
+  width: fit-content;
+}
