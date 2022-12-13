@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import { Stack } from "@mui/system";
-import "./Login.css";
+import "./Login.scss";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "../Theme";
 import React from "react";
