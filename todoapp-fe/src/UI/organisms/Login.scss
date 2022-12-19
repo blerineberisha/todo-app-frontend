@@ -1,0 +1,37 @@
+.Login {
+  &-paper {
+    width: 420px;
+    padding: 20px 60px 50px 60px;
+    border-radius: 30px !important;
+  }
+
+  &-container {
+    gap: 20px;
+    align-items: center;
+
+    > * {
+      width: 100%;
+    }
+  }
+
+  &-button {
+    border-radius: 100px !important;
+
+    &-signup {
+      @extend .Login-button;
+      width: fit-content;
+    }
+  }
+
+  &-divider {
+    font-size: 14px !important;
+    color: gray !important;
+  }
+
+  &-header {
+    color: var(--primary-main);
+    text-align: center;
+    font-weight: bold;
+    margin: 10px;
+  }
+}
