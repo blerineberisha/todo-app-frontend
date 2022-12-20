@@ -1,0 +1,46 @@
+.Register {
+  &-paper {
+    width: 420px;
+    padding: 60px;
+    border-radius: 30px !important;
+  }
+
+  &-container {
+    gap: 20px;
+    align-items: center;
+
+    > * {
+      width: 100%;
+    }
+  }
+
+  &-name-container {
+    flex-direction: row !important;
+    gap: 10px;
+  }
+
+  &-button {
+    border-radius: 100px !important;
+
+    &-signup {
+      @extend .Register-button;
+      width: fit-content;
+    }
+  }
+
+  &-divider {
+    font-size: 14px !important;
+    color: gray !important;
+  }
+
+  &-header {
+    color: var(--primary-main);
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  &-textfield-icon {
+    color: rgba(0, 0, 0, 0.54);
+  }
+}
