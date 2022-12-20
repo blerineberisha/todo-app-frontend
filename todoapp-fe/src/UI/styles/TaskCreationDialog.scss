@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito&display=swap');
+
+:host{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito', sans-serif;
+}
+.dialog_title{
+    color: #0B926D;
+    font-weight: bold !important;
+}
+.buttons{
+    border-radius: 25px !important; 
+    font-weight: bold !important;
+}
+.button_group{
+    margin-right: 1em;
+}
