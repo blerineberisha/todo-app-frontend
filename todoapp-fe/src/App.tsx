@@ -5,7 +5,7 @@ import TaskCreationDialog from "./UI/organisms/TaskCreationDialog";
 
 function App() {
   return (
-   <TaskCreationDialog></TaskCreationDialog>
+    <Typography>main app</Typography>
   );
 }
 
