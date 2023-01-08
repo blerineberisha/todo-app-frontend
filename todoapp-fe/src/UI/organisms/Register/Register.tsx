@@ -1,20 +1,11 @@
-import {
-  Button,
-  TextField,
-  Paper,
-  FormControl,
-  InputLabel,
-  OutlinedInput,
-  InputAdornment,
-  IconButton,
-} from "@mui/material";
+import { Button, TextField, Paper } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import { Stack } from "@mui/system";
 import "./Register.scss";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "../../Theme";
-import React, { useState } from "react";
-import { Mail, Person, Visibility, VisibilityOff } from "@mui/icons-material";
+import { useState } from "react";
+import { Mail, Person } from "@mui/icons-material";
 import PasswordField from "../../molecules/PasswordField/PasswordField";
 
 function Register() {
