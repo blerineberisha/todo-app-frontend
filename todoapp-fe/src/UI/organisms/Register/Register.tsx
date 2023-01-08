@@ -12,9 +12,18 @@ function Register() {
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
+  const [emailValid, setEmailValid] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [repeatedPassword, setRepeatedPassword] = useState("");
+
+  const validateEmail = () => {
+    setEmailValid(
+      !!email.match(
+        /^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-]+)(\.[a-zA-Z]{2,5}){1,2}$/
+      )
+    );
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -40,6 +49,11 @@ function Register() {
             variant="outlined"
             required
             onChange={(e) => setEmail(e.target.value)}
+            onBlur={validateEmail}
+            error={!emailValid && !!email}
+            helperText={
+              !emailValid && !!email ? "Enter valid email address." : null
+            }
             InputProps={{
               endAdornment: <Mail className="Register-textfield-icon" />,
             }}
@@ -63,7 +77,9 @@ function Register() {
             label="Repeat Password"
             variant="outlined"
             required
+            helperText="Passwords don't match."
             onChange={(e) => setRepeatedPassword(e.target.value)}
+            validatePassword={(p) => password === p}
           />
           <Button className="Register-button" variant="contained" size="large">
             SIGN IN
