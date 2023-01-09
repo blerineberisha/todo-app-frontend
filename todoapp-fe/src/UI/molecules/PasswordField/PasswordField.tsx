@@ -11,9 +11,6 @@ interface PasswordFieldProps {
   onChange?:
     | React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
     | undefined;
-  onBlur?:
-    | React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
-    | undefined;
   validatePassword?: (password: string) => boolean;
 }
 
@@ -29,16 +26,24 @@ function PasswordField(props: PasswordFieldProps) {
     props.onChange?.(event);
   };
 
+  const handleKeyUp = () => {
+    if (!!props.validatePassword) {
+      setPasswordValid(props.validatePassword(password));
+    } else {
+      setPasswordValid(defaultValidatePassword(password));
+    }
+  };
+
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
   };
 
-  const validatePassword = (password: string) => {
+  const defaultValidatePassword = (password: string) => {
     return (
       password.length >= 8 &&
       !!password.match(/\d+/) &&
-      !!password.match(/[[:lower:]]+/) &&
-      !!password.match(/[[:upper:]]+/) &&
+      !!password.match(/[a-z]+/) &&
+      !!password.match(/[A-Z]+/) &&
       !!password.match(/\W+/)
     );
   };
@@ -49,14 +54,7 @@ function PasswordField(props: PasswordFieldProps) {
       variant={props.variant}
       required={props.required}
       onChange={handlePasswordChange}
-      onBlur={(e) => {
-        if (props.validatePassword !== null) {
-          setPasswordValid(props.validatePassword?.(password) || false);
-        } else {
-          setPasswordValid(validatePassword(password));
-        }
-        props.onBlur?.(e);
-      }}
+      onKeyUp={handleKeyUp}
       error={!passwordValid && !!password}
       helperText={
         !passwordValid && !!password
@@ -67,7 +65,6 @@ function PasswordField(props: PasswordFieldProps) {
       InputProps={{
         endAdornment: (
           <InputAdornment position="end">
-            valid="{passwordValid}"
             <IconButton
               className="PasswordField-icon-button"
               aria-label="toggle password visibility"
