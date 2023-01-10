@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito&display=swap');
+
+:host {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito', sans-serif;
+}
+
+.dialog_title {
+    color: #0B926D;
+    font-weight: bold !important;
+}
+
+.buttons {
+    border-radius: 25px !important;
+    font-weight: bold !important;
+}
+
+.title::placeholder {
+    color: #49B093 !important;
+    font-size: 5em !important;
+}
+
+.button_group {
+    margin-right: 1em;
+}
+
+#addButton {
+    background-color: #49B093;
+    border-color: #49B093;
+    color: white;
+    width: 75px;
+}
+
+#cancelButton {
+    color: #49B093;
+    border-color: #49B093;
+}
