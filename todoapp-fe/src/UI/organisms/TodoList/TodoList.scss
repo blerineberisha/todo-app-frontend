@@ -1,0 +1,20 @@
+@import "../../../index.scss";
+
+.TodoList {
+  padding: 0 20px;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+h1 {
+  color: $primary-main;
+}
