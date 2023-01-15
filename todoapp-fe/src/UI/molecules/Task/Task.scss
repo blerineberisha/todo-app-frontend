@@ -1,0 +1,45 @@
+@import "../../../index.scss";
+
+.Task {
+  &-paper {
+    background-color: $primary-light !important;
+    color: white !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+
+    &-closed {
+      @extend .Task-paper;
+      color: gray;
+    }
+  }
+
+  &-state-toggler {
+    width: 100%;
+  }
+
+  &-checkbox {
+    &-unchecked {
+      color: white;
+    }
+    &-checked {
+      color: lightgray;
+    }
+  }
+
+  &-name {
+    font-size: large;
+
+    &-closed {
+      @extend .Task-name;
+      color: lightgray;
+      text-decoration: line-through;
+    }
+  }
+
+  &-more {
+    &-icon {
+      color: white;
+    }
+  }
+}
