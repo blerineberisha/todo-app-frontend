@@ -5,7 +5,6 @@ import "./Login.scss";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "../../Theme";
 import { useState } from "react";
-import PasswordField from "../../molecules/PasswordField/PasswordField";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -22,7 +21,7 @@ function Login() {
             required
             onChange={(e) => setUsername(e.target.value)}
           />
-          <PasswordField
+          <TextField
             label="Password"
             variant="outlined"
             required
