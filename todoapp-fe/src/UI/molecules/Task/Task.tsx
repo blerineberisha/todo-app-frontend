@@ -4,8 +4,10 @@ import { MoreHoriz, RadioButtonUnchecked, TaskAlt } from "@mui/icons-material";
 import { useState } from "react";
 import { TaskState } from "../../../types/TaskState";
 import theme from "../../Theme";
+import Strikethrough from "../../atoms/Strikethrough/Strikethrough";
 
 export type TaskProps = {
+  key: number;
   name: string;
   description?: string;
   state: TaskState;
@@ -30,13 +32,9 @@ function Task(props: TaskProps) {
             icon={<RadioButtonUnchecked className="Task-checkbox-unchecked" />}
             checkedIcon={<TaskAlt className="Task-checkbox-checked" />}
           />
-          <span
-            className={`Task-name${
-              state === TaskState.CLOSED ? "-closed" : ""
-            }`}
-          >
+          <Strikethrough condition={state === TaskState.CLOSED}>
             {props.name}
-          </span>
+          </Strikethrough>
         </div>
         <IconButton className="Task-more-button">
           <MoreHoriz className="Task-more-icon" />

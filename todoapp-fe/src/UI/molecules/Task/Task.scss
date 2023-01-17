@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: row;
     justify-content: stretch;
+    cursor: pointer;
 
     &-closed {
       @extend .Task-paper;
@@ -27,16 +28,7 @@
     }
     &-checked {
       color: lightgray;
-    }
-  }
-
-  &-name {
-    font-size: large;
-
-    &-closed {
-      @extend .Task-name;
-      color: lightgray;
-      text-decoration: line-through;
+      animation: checkboxAnimation 0.25s;
     }
   }
 
@@ -44,5 +36,20 @@
     &-icon {
       color: white;
     }
+  }
+
+  :hover {
+    box-shadow: 1px;
+  }
+}
+
+@keyframes checkboxAnimation {
+  from {
+    color: white;
+    transform: rotate(180deg);
+  }
+  to {
+    color: lightgray;
+    transform: rotate(360deg);
   }
 }
