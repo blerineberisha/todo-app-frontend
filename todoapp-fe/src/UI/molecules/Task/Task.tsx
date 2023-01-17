@@ -15,18 +15,8 @@ function Task(props: TaskProps) {
   const [state, setState] = useState(props.state);
 
   function toggleState() {
-    switch (state) {
-      case TaskState.CLOSED:
-        setState(TaskState.OPEN);
-        break;
-      case (TaskState.IN_PROGRESS, TaskState.OPEN):
-        setState(TaskState.CLOSED);
-        break;
-    }
-  }
-
-  function handleMoreClick() {
-    // AAAAAA
+    if (state !== TaskState.CLOSED) setState(TaskState.CLOSED);
+    else setState(TaskState.OPEN);
   }
 
   return (
@@ -48,7 +38,7 @@ function Task(props: TaskProps) {
             {props.name}
           </span>
         </div>
-        <IconButton className="Task-more-button" onClick={handleMoreClick}>
+        <IconButton className="Task-more-button">
           <MoreHoriz className="Task-more-icon" />
         </IconButton>
       </Paper>
