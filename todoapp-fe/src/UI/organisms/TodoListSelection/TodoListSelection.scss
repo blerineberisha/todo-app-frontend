@@ -1,0 +1,31 @@
+@import "../../../index.scss";
+
+.TodoListSelection {
+  &-item {
+    background-color: $primary-dark;
+    color: white;
+    font-size: large;
+
+    &-selected {
+      @extend .TodoListSelection-item;
+      background-color: white;
+      color: $primary-dark;
+    }
+
+    &-delete {
+      color: rgba(255, 255, 255, 0.5) !important;
+
+      &:hover {
+        color: rgba(255, 255, 255, 0.8) !important;
+      }
+    }
+
+    &-selected &-delete {
+      color: $primary-light !important;
+
+      &:hover {
+        color: $error-main !important;
+      }
+    }
+  }
+}

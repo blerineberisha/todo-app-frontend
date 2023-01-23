@@ -2,10 +2,10 @@ import "./TodoList.scss";
 import Task, { TaskProps } from "../../molecules/Task/Task";
 import TaskCreationDialog from "../TaskCreationDialog";
 
-interface TodoListProps {
+export type TodoListProps = {
   name: string;
   tasks: TaskProps[];
-}
+};
 
 function TodoList(props: TodoListProps) {
   const tasks = props.tasks.map((prop) => <Task {...prop} />);
