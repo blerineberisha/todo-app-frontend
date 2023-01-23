@@ -34,15 +34,15 @@ export default function TaskEditDialog() {
             type="text"
             fullWidth
             variant="outlined"
-            ></TextField>
+          ></TextField>
           <TextField
             id="outlined-multiline-static"
-             margin='dense'
+            margin='dense'
             label="Description"
             multiline
             fullWidth
             rows={3}
-        ></TextField>
+          ></TextField>
         </DialogContent>
         <DialogActions className='button_group'>
           <Button onClick={handleClose} variant='outlined' className='buttons' id="cancelButton">Cancel</Button>
