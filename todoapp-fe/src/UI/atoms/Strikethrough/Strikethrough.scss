@@ -1,0 +1,43 @@
+.Strikethrough {
+  position: relative;
+
+  &-content {
+    font-size: large;
+    user-select: none;
+
+    &-closed {
+      @extend .Strikethrough-content;
+      color: lightgray;
+      animation: grayOut;
+    }
+  }
+  &-line {
+    width: 100%;
+    height: 2px;
+    background-color: lightgray;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    animation: strikethroughAnimation 0.25s;
+  }
+}
+
+@keyframes strikethroughAnimation {
+  from {
+    background-color: white;
+    width: 0;
+  }
+  to {
+    background-color: lightgray;
+    width: 100%;
+  }
+}
+
+@keyframes grayOut {
+  from {
+    color: white;
+  }
+  to {
+    color: lightgray;
+  }
+}
