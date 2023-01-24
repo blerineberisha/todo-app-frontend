@@ -50,11 +50,7 @@ const TaskCreationDialog = () => {
         } = props;
         return (
           <Form>
-            <Button
-              variant="contained"
-              onClick={handleClickOpen}
-              sx={{ backgroundColor: "#49B093" }}
-            >
+            <Button variant="contained" onClick={handleClickOpen} sx={{ backgroundColor: "#49B093" }}>
               Add task
             </Button>
             <Dialog open={open} onClose={handleClose} fullWidth maxWidth="sm">
@@ -67,8 +63,14 @@ const TaskCreationDialog = () => {
                   type="text"
                   fullWidth
                   variant="outlined"
-                  helperText={errors.name && touched.name ? errors.name : null}
-                  error={errors.name && touched.name ? true : false}
+                  helperText={
+                    errors.name && touched.name
+                      ? errors.name
+                      : null
+                  }
+                  error={
+                    errors.name && touched.name ? true : false
+                  }
                   onChange={handleChange}
                   onBlur={handleBlur}
                   required
