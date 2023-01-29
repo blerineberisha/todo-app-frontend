@@ -1,6 +1,4 @@
 import {
-  Box,
-  Button,
   IconButton,
   List,
   ListItem,
@@ -52,7 +50,6 @@ export default function TodoListSelection(props: TodoListSelectionProps) {
 
   return (
     <div className="TodoListSelection">
-      <Button onClick={debug}>DEBUG</Button>
       <List className="TodoListSelection-list">{items}</List>
       <TodoList
         name={selectedList?.label || "Label not found"}
