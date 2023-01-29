@@ -48,15 +48,6 @@ export default function TodoListSelection(props: TodoListSelectionProps) {
     </ListItem>
   ));
 
-  function debug() {
-    props.items.forEach((list) => {
-      console.log(list.label);
-      list.tasks.forEach((task) => {
-        console.log(`  ${task.name} -> ${task.state}`);
-      });
-    });
-  }
-
   let selectedList = props.items.find((v) => v.key === selected);
 
   return (
