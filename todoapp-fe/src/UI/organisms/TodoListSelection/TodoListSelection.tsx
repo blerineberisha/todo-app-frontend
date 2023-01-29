@@ -8,14 +8,11 @@ import {
 import "./TodoListSelection.scss";
 import { Delete } from "@mui/icons-material";
 import { useState } from "react";
-import TodoList from "../TodoList/TodoList";
-import { TaskProps } from "../../molecules/Task/Task";
 
 export type TodoListSelectionProps = {
   items: {
     key: number;
     label: string;
-    tasks: TaskProps[];
   }[];
 };
 
@@ -46,15 +43,9 @@ export default function TodoListSelection(props: TodoListSelectionProps) {
     </ListItem>
   ));
 
-  let selectedList = props.items.find((v) => v.key === selected);
-
   return (
     <div className="TodoListSelection">
       <List className="TodoListSelection-list">{items}</List>
-      <TodoList
-        name={selectedList?.label || "Label not found"}
-        tasks={selectedList?.tasks || []}
-      />
     </div>
   );
 }
